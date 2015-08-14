@@ -14,6 +14,14 @@
 		1AA383F31B7DB473001506A5 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1AA383F21B7DB473001506A5 /* Images.xcassets */; };
 		1AA383F61B7DB473001506A5 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1AA383F41B7DB473001506A5 /* LaunchScreen.xib */; };
 		1AA384021B7DB473001506A5 /* tabcellManagerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AA384011B7DB473001506A5 /* tabcellManagerTests.m */; };
+		1AA384211B7DB793001506A5 /* RowItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AA3841F1B7DB793001506A5 /* RowItem.m */; };
+		1ACB27F91B7DC405004875CA /* Test1Controller.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ACB27F71B7DC405004875CA /* Test1Controller.m */; };
+		1ACB27FA1B7DC405004875CA /* Test1Controller.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1ACB27F81B7DC405004875CA /* Test1Controller.xib */; };
+		1ACB27FD1B7DC445004875CA /* SectionItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ACB27FC1B7DC445004875CA /* SectionItem.m */; };
+		1ACB28011B7DDC8D004875CA /* BasicTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ACB27FF1B7DDC8D004875CA /* BasicTableViewController.m */; };
+		1ACB28021B7DDC8D004875CA /* BasicTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1ACB28001B7DDC8D004875CA /* BasicTableViewController.xib */; };
+		1ACB28061B7DDDBD004875CA /* CustomTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ACB28041B7DDDBD004875CA /* CustomTableCell.m */; };
+		1ACB28071B7DDDBD004875CA /* CustomTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1ACB28051B7DDDBD004875CA /* CustomTableCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +48,19 @@
 		1AA383FB1B7DB473001506A5 /* tabcellManagerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = tabcellManagerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1AA384001B7DB473001506A5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1AA384011B7DB473001506A5 /* tabcellManagerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = tabcellManagerTests.m; sourceTree = "<group>"; };
+		1AA3841E1B7DB793001506A5 /* RowItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RowItem.h; sourceTree = "<group>"; };
+		1AA3841F1B7DB793001506A5 /* RowItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RowItem.m; sourceTree = "<group>"; };
+		1ACB27F61B7DC405004875CA /* Test1Controller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Test1Controller.h; sourceTree = "<group>"; };
+		1ACB27F71B7DC405004875CA /* Test1Controller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Test1Controller.m; sourceTree = "<group>"; };
+		1ACB27F81B7DC405004875CA /* Test1Controller.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Test1Controller.xib; sourceTree = "<group>"; };
+		1ACB27FB1B7DC445004875CA /* SectionItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SectionItem.h; sourceTree = "<group>"; };
+		1ACB27FC1B7DC445004875CA /* SectionItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SectionItem.m; sourceTree = "<group>"; };
+		1ACB27FE1B7DDC8D004875CA /* BasicTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BasicTableViewController.h; sourceTree = "<group>"; };
+		1ACB27FF1B7DDC8D004875CA /* BasicTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BasicTableViewController.m; sourceTree = "<group>"; };
+		1ACB28001B7DDC8D004875CA /* BasicTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BasicTableViewController.xib; sourceTree = "<group>"; };
+		1ACB28031B7DDDBD004875CA /* CustomTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomTableCell.h; sourceTree = "<group>"; };
+		1ACB28041B7DDDBD004875CA /* CustomTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomTableCell.m; sourceTree = "<group>"; };
+		1ACB28051B7DDDBD004875CA /* CustomTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomTableCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,9 +102,13 @@
 		1AA383E41B7DB473001506A5 /* tabcellManager */ = {
 			isa = PBXGroup;
 			children = (
+				1AA3840D1B7DB682001506A5 /* class */,
 				1AA383E91B7DB473001506A5 /* AppDelegate.h */,
 				1AA383EA1B7DB473001506A5 /* AppDelegate.m */,
 				1AA383EC1B7DB473001506A5 /* ViewController.h */,
+				1ACB27F61B7DC405004875CA /* Test1Controller.h */,
+				1ACB27F71B7DC405004875CA /* Test1Controller.m */,
+				1ACB27F81B7DC405004875CA /* Test1Controller.xib */,
 				1AA383ED1B7DB473001506A5 /* ViewController.m */,
 				1AA383EF1B7DB473001506A5 /* Main.storyboard */,
 				1AA383F21B7DB473001506A5 /* Images.xcassets */,
@@ -117,6 +142,55 @@
 				1AA384001B7DB473001506A5 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		1AA3840D1B7DB682001506A5 /* class */ = {
+			isa = PBXGroup;
+			children = (
+				1AA3840F1B7DB6CE001506A5 /* viewswitch */,
+			);
+			path = class;
+			sourceTree = "<group>";
+		};
+		1AA3840F1B7DB6CE001506A5 /* viewswitch */ = {
+			isa = PBXGroup;
+			children = (
+				1AA3841D1B7DB793001506A5 /* Model */,
+				1AA384201B7DB793001506A5 /* View */,
+				1AA384101B7DB6CE001506A5 /* Controller */,
+			);
+			path = viewswitch;
+			sourceTree = "<group>";
+		};
+		1AA384101B7DB6CE001506A5 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				1ACB27FE1B7DDC8D004875CA /* BasicTableViewController.h */,
+				1ACB27FF1B7DDC8D004875CA /* BasicTableViewController.m */,
+				1ACB28001B7DDC8D004875CA /* BasicTableViewController.xib */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		1AA3841D1B7DB793001506A5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1AA3841E1B7DB793001506A5 /* RowItem.h */,
+				1AA3841F1B7DB793001506A5 /* RowItem.m */,
+				1ACB27FB1B7DC445004875CA /* SectionItem.h */,
+				1ACB27FC1B7DC445004875CA /* SectionItem.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		1AA384201B7DB793001506A5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1ACB28031B7DDDBD004875CA /* CustomTableCell.h */,
+				1ACB28041B7DDDBD004875CA /* CustomTableCell.m */,
+				1ACB28051B7DDDBD004875CA /* CustomTableCell.xib */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -200,8 +274,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				1AA383F11B7DB473001506A5 /* Main.storyboard in Resources */,
+				1ACB27FA1B7DC405004875CA /* Test1Controller.xib in Resources */,
 				1AA383F61B7DB473001506A5 /* LaunchScreen.xib in Resources */,
+				1ACB28071B7DDDBD004875CA /* CustomTableCell.xib in Resources */,
 				1AA383F31B7DB473001506A5 /* Images.xcassets in Resources */,
+				1ACB28021B7DDC8D004875CA /* BasicTableViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -219,9 +296,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1ACB27FD1B7DC445004875CA /* SectionItem.m in Sources */,
 				1AA383EE1B7DB473001506A5 /* ViewController.m in Sources */,
 				1AA383EB1B7DB473001506A5 /* AppDelegate.m in Sources */,
+				1ACB28011B7DDC8D004875CA /* BasicTableViewController.m in Sources */,
+				1ACB27F91B7DC405004875CA /* Test1Controller.m in Sources */,
 				1AA383E81B7DB473001506A5 /* main.m in Sources */,
+				1AA384211B7DB793001506A5 /* RowItem.m in Sources */,
+				1ACB28061B7DDDBD004875CA /* CustomTableCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -418,6 +500,7 @@
 				1AA384071B7DB473001506A5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1AA384081B7DB473001506A5 /* Build configuration list for PBXNativeTarget "tabcellManagerTests" */ = {
 			isa = XCConfigurationList;
@@ -426,6 +509,7 @@
 				1AA3840A1B7DB473001506A5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
