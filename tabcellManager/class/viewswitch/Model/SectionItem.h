@@ -19,4 +19,6 @@
 /**存放着这组所有行的数据模型(这个数组中都是RowItem对象)*/
 @property (nonatomic, strong) NSArray *rowItems;
 
+
++ (instancetype)itemWithfooter:(NSString*)icon header:(NSString*)title rowItems:(NSArray*)rowItems;
 @end

@@ -9,41 +9,33 @@
 #import "CustomTableCell.h"
 #import "RowItem.h"
 
-//#import "MJSettingLabelItem.h"
-
 
 
 // 判断是否为iOS7
 #define iOS7 ([[UIDevice currentDevice].systemVersion doubleValue] >= 7.0)
 
 // 获得RGB颜色
-#define MJColor(r, g, b) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:1.0]
+#define MYColor(r, g, b) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:1.0]
 
 @interface CustomTableCell()
-/**
- *  箭头
- */
-@property (nonatomic, strong) UIImageView *arrowView;
-/**
- *  开关
- */
-@property (nonatomic, strong) UISwitch *switchView;
-/**
- *  标签
- */
-@property (nonatomic, strong) UILabel *labelView;
 
+@property (nonatomic, strong) UIImageView *rightView;/*右边小图片 */
+@property (nonatomic, strong) UISwitch *switchView;/*  开关  */
+@property (nonatomic, strong) UILabel *labelView;/*  标签  */
 @property (nonatomic, weak) UIView *divider;
+
 @end
 
 @implementation CustomTableCell
 //懒加载，由于cell复用机制，最好只创建一次
-- (UIImageView *)arrowView
+- (UIImageView *)rightView
 {
-    if (_arrowView == nil) {
-        _arrowView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"CellArrow"]];
-    }
-    return _arrowView;
+    if (_rightView == nil) {
+
+    NSMutableString *rightIcon = [NSMutableString stringWithFormat:@"0%ld",(long)_item.rightIcon];
+    _rightView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:rightIcon]];
+           }
+    return _rightView;
 }
 //懒加载，由于cell复用机制，最好只创建一次
 - (UISwitch *)switchView
@@ -95,7 +87,7 @@
     
     // 设置选中时的背景
     UIView *selectedBg = [[UIView alloc] init];
-    selectedBg.backgroundColor = MJColor(237, 233, 218);
+    selectedBg.backgroundColor = MYColor(237, 233, 218);
     self.selectedBackgroundView = selectedBg;
 }
 
@@ -136,6 +128,7 @@
 + (instancetype)cellWithTableView:(UITableView *)tableView
 {
     static NSString *ID = @"setting";
+
     CustomTableCell *cell = [tableView dequeueReusableCellWithIdentifier:ID];
     if (cell == nil) {
         cell = [[CustomTableCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:ID];
@@ -176,12 +169,12 @@
 - (void)setItem:(RowItem *)item
 {
     _item = item;
-    
+    // 2.设置右边的内容
+    [self setupRightContent];
     // 1.设置数据
     [self setupData];
     
-    // 2.设置右边的内容
-    [self setupRightContent];
+   
 }
 
 - (void)setLastRowInSection:(BOOL)lastRowInSection
@@ -196,26 +189,38 @@
  */
 - (void)setupRightContent
 {
-    switch (self.item.cellType) {
-        case CellTypeArrow:
-            //箭头
-            self.accessoryView = self.arrowView;
-            self.selectionStyle = UITableViewCellSelectionStyleDefault;
+    switch (_item.rightIcon) {
+       
+        case CellTypeSwitch:
+        { //开关
+            self.accessoryView = self.switchView;
+            self.selectionStyle = UITableViewCellSelectionStyleNone;
+            // 设置开关的状态
+            NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+            self.switchView.on = [defaults boolForKey:_item.title];
+        }
             break;
-            
-//        case CellTypeswitch:
-//            //开关
-//            self.accessoryView = self.switchView;
-//            self.selectionStyle = UITableViewCellSelectionStyleNone;
-//            // 设置开关的状态
-//            NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-//            self.switchView.on = [defaults boolForKey:self.item.title];
-//            break;
  
-        default:
+       case CellTypeNone:
+        {
             self.accessoryView = nil;
             self.selectionStyle = UITableViewCellSelectionStyleDefault;
+        }
             break;
+        case CellTypeLabel:
+        {
+            self.accessoryView = self.labelView;
+            self.selectionStyle = UITableViewCellSelectionStyleDefault;
+         }
+            break;
+          default:
+        {
+           
+            self.accessoryView = self.rightView;
+            self.selectionStyle = UITableViewCellSelectionStyleDefault;
+        }
+            break;
+            
     }
     
     

@@ -7,6 +7,9 @@
 //
 
 #import "ViewController.h"
+#import "SettingViewController.h"
+#import "RowItem.h"
+#import "SectionItem.h"
 
 @interface ViewController ()
 
@@ -17,6 +20,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+}
+- (IBAction)jumpSettingVC:(UIButton *)sender {
+    
+    SettingViewController *settingVC = [[SettingViewController alloc]init];
+    [self.navigationController pushViewController:settingVC animated:YES];
 }
 
 - (void)didReceiveMemoryWarning {

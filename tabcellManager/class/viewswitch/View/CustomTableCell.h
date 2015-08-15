@@ -9,10 +9,6 @@
 #import <UIKit/UIKit.h>
 @class RowItem;
 
-//typedef NS_ENUM(NSInteger, CellType) {
-//  
-//    
-//};
 
 
 

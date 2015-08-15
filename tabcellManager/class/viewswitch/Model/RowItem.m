@@ -7,23 +7,31 @@
 //
 
 #import "RowItem.h"
+@interface RowItem ()
 
+@end
 @implementation RowItem
 
-+ (instancetype)itemWithIcon:(NSString*)icon title:(NSString*)title goalVCClass:(Class)goalVCClass{
++ (instancetype)itemWithIcon:(NSString*)icon title:(NSString*)title type:(NSInteger)rightIcon  goalVCClass:(Class)goalVCClass{
 
     RowItem *item = [[self alloc]init];
     item.icon = icon;
     item.title = title;
+    item.rightIcon = rightIcon;
     item.goalVCClass = goalVCClass;
-    
+    //item.cellType= cellType;
     return item;
 }
 
 
 + (instancetype)itemWithIcon:(NSString*)icon title:(NSString*)title
 {
-    return [self itemWithIcon:icon title:title goalVCClass:nil];
+    return [self itemWithIcon:icon title:icon type:CellTypeNone goalVCClass:nil];
 }
 
+
+-(void)rowItemOptionblock:(void (^)())rowItemOption
+{
+   self.option= rowItemOption;
+}
 @end

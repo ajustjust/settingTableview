@@ -32,8 +32,8 @@
     
     // 背景色
     //  backgroundView 的优先级 >  backgroundColor
-    self.tableView.backgroundView = nil;
-    self.tableView.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"bg"]];
+//    self.tableView.backgroundView = nil;
+//    self.tableView.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"bg"]];
 }
 
 - (NSArray *)data
